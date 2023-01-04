@@ -1,4 +1,4 @@
---[[ Creditss
+--[[ Creditsss
     Matas#3535 @matas - Created UI
     bored#9316 @wally hub user - Helped make library
 ]]
