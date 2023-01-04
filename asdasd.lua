@@ -239,9 +239,9 @@ do
                 break
             end
         end
-        if instance.__OBJECT_EXISTS then
+        --[[if instance.__OBJECT_EXISTS then
             instance:Remove()
-        end
+        end]]
     end
     --
     function utility:GetSubPrefix(str)
