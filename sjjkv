@@ -5791,7 +5791,7 @@ local m_thread = task do
 end
 
 function library:SettingsPage(window)
-    local settings_page = window:Page({name = "Settings", side = "Left", size = 104}) 
+    local settings_page = window:Page({name = "Settings", side = "Left"}) 
 
     local config_section = settings_page:Section({name = "Configuration", side = "Left"}) 
     local current_list = {}
