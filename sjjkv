@@ -5948,6 +5948,4 @@ function library:SettingsPage(window)
     end})   
 end
 
-window.uibind = Enum.KeyCode.Home
-
 return library, library.pointers, theme -- utility
