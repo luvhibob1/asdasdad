@@ -724,7 +724,7 @@ do
                 Color = theme.textcolor,
                 OutlineColor = theme.textborder,
                 Hidden = true,
-                ZIndex = 1010,
+                ZIndex = 1011,
                 Position = utility:Position(0, 2 + 6, 0, 4, watermark_outline),
                 Visible = window.watermark.visible
             })
