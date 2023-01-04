@@ -682,7 +682,7 @@ do
                 Size = utility:Size(1, -2, 1, -2, watermark_outline),
                 Position = utility:Position(0, 1, 0, 1, watermark_outline),
                 Hidden = true,
-                ZIndex = 1010,
+                ZIndex = 1011,
                 Color = theme.inline,
                 Visible = window.watermark.visible
             })
@@ -695,7 +695,7 @@ do
                 Size = utility:Size(1, -2, 1, -2, watermark_inline),
                 Position = utility:Position(0, 1, 0, 1, watermark_inline),
                 Hidden = true,
-                ZIndex = 1010,
+                ZIndex = 1012,
                 Color = theme.lightcontrast,
                 Visible = window.watermark.visible
             })
@@ -708,7 +708,7 @@ do
                 Size = utility:Size(1, 0, 0, 1, watermark_frame),
                 Position = utility:Position(0, 0, 0, 0, watermark_frame),
                 Hidden = true,
-                ZIndex = 1010,
+                ZIndex = 1013,
                 Color = theme.accent,
                 Visible = window.watermark.visible
             })
@@ -724,7 +724,7 @@ do
                 Color = theme.textcolor,
                 OutlineColor = theme.textborder,
                 Hidden = true,
-                ZIndex = 1011,
+                ZIndex = 1014,
                 Position = utility:Position(0, 2 + 6, 0, 4, watermark_outline),
                 Visible = window.watermark.visible
             })
