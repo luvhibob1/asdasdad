@@ -338,9 +338,7 @@ do
         --
         local function lerp()
             for i,v in pairs(instanceTo) do
-                if instance.__OBJECT_EXISTS then
-                    instance[i] = ((v - currentIndex[i]) * currentTime / instanceTime) + currentIndex[i]
-                end
+                instance[i] = ((v - currentIndex[i]) * currentTime / instanceTime) + currentIndex[i]
             end
         end
         --
