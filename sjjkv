@@ -3330,17 +3330,17 @@ do
                                 if not button.confirmable then
                                     return
                                 end
-                                if button_title.__OBJECT_EXISTS then
+                                --if button_title.__OBJECT_EXISTS then
                                     button_title.Text = ("Confirm? [%s]"):format(i)
-                                end
+                                --end
                             end
                             --
-                            if button_title.__OBJECT_EXISTS then
+                            --if button_title.__OBJECT_EXISTS then
                                 button.confirmable = false
                                 --
                                 button_title.Text = name
                                 button_title.Color = theme.textcolor
-                            end
+                            --end
                         end)
                     end
                 else
