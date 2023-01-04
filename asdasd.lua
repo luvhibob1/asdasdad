@@ -239,9 +239,8 @@ do
                 break
             end
         end
-        if instance.__OBJECT_EXISTS then
-            instance:Remove()
-        end
+        table.remove(hidden and library.hidden or library.drawings, ind)
+        instance:Remove()
     end
     --
     function utility:GetSubPrefix(str)
