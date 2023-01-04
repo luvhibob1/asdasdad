@@ -1203,7 +1203,7 @@ do
                 Size = utility:Size(1, -2, 1, -2, statuslist_outline),
                 Position = utility:Position(0, 1, 0, 1, statuslist_outline),
                 Hidden = true,
-                ZIndex = 1005,
+                ZIndex = 1015,
                 Color = theme.inline,
                 Visible = window.statuslist.visible
             })
@@ -1216,7 +1216,7 @@ do
                 Size = utility:Size(1, -2, 1, -2, statuslist_inline),
                 Position = utility:Position(0, 1, 0, 1, statuslist_inline),
                 Hidden = true,
-                ZIndex = 1005,
+                ZIndex = 1016,
                 Color = theme.lightcontrast,
                 Visible = window.statuslist.visible
             })
@@ -1229,7 +1229,7 @@ do
                 Size = utility:Size(1, 0, 0, 1, statuslist_frame),
                 Position = utility:Position(0, 0, 0, 0, statuslist_frame),
                 Hidden = true,
-                ZIndex = 1005,
+                ZIndex = 1017,
                 Color = theme.accent,
                 Visible = window.statuslist.visible
             })
@@ -1246,7 +1246,7 @@ do
                 OutlineColor = theme.textborder,
                 Center = true,
                 Hidden = true,
-                ZIndex = 1005,
+                ZIndex = 1018,
                 Position = utility:Position(0.5, 0, 0, 5, statuslist_outline),
                 Visible = window.statuslist.visible
             })
@@ -1273,7 +1273,7 @@ do
                         Size = utility:Size(1, 0, 0, 18, statuslist_outline),
                         Position = utility:Position(0, 0, 1, -1, statuslist_outline),
                         Hidden = true,
-                        ZIndex = 1005,
+                        ZIndex = 1019,
                         Color = theme.outline,
                         Visible = window.statuslist.visible
                     })
@@ -1286,7 +1286,7 @@ do
                         Size = utility:Size(1, -2, 1, -2, status_outline),
                         Position = utility:Position(0, 1, 0, 1, status_outline),
                         Hidden = true,
-                        ZIndex = 1005,
+                        ZIndex = 1020,
                         Color = theme.inline,
                         Visible = window.statuslist.visible
                     })
@@ -1299,7 +1299,7 @@ do
                         Size = utility:Size(1, -2, 1, -2, status_inline),
                         Position = utility:Position(0, 1, 0, 1, status_inline),
                         Hidden = true,
-                        ZIndex = 1005,
+                        ZIndex = 1021,
                         Color = theme.darkcontrast,
                         Visible = window.statuslist.visible
                     })
@@ -1316,7 +1316,7 @@ do
                         OutlineColor = theme.textborder,
                         Center = false,
                         Hidden = true,
-                        ZIndex = 1005,
+                        ZIndex = 1022,
                         Position = utility:Position(0, 4, 0, 3, status_outline),
                         Visible = window.statuslist.visible
                     })
