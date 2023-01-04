@@ -5946,8 +5946,8 @@ function library:SettingsPage(window)
     themes_section:Colorpicker({pointer = "settings/menu/accent", name = "Cursor Outline", default = Color3.fromRGB(10, 10, 10), callback = function(p_state)
         library:UpdateColor("cursoroutline", p_state)
     end})   
-
-    window.uibind = Enum.KeyCode.Home
 end
+
+window.uibind = Enum.KeyCode.Home
 
 return library, library.pointers, theme -- utility
