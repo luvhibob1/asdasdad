@@ -3925,8 +3925,9 @@ function library:init()
 
                         self.objects.inputText.ThemeColor = 'Option Text 1';
                         c = utility:Connection(inputservice.InputBegan, function(inp)
-                            if inp.KeyCode == inp.UserInputType == Enum.UserInputType.MouseButton1 then
+                            if inp.KeyCode == Enum.KeyCode.Return or inp.UserInputType == Enum.UserInputType.MouseButton1 then
                                 box:ReleaseFocus(true);
+                                actionservice:UnbindAction('FreezeMovement');
                             elseif inp.KeyCode == Enum.KeyCode.Escape then
                                 input = self.input
                                 self.objects.inputText.Text = input;
