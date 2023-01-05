@@ -4753,23 +4753,8 @@ function library:CreateSettingsTab(menu)
         library:SetOpen(not library.open)
     end});
 
-    mainSection:AddToggle({text = 'Disable Movement If Open', flag = 'disablemenumovement', callback = function(bool)
-        if bool and library.open then
-            actionservice:BindAction(
-                'FreezeMovement',
-                function()
-                    return Enum.ContextActionResult.Sink
-                end,
-                false,
-                unpack(Enum.PlayerActions:GetEnumItems())
-            )
-        else
-            actionservice:UnbindAction('FreezeMovement');
-        end
-    end})
-
     mainSection:AddButton({text = 'Join Discord', flag = 'joindiscord', confirm = true, callback = function()
-        local res = syn.request({
+        local res = syn.request or request({
             Url = 'http://127.0.0.1:6463/rpc?v=1',
             Method = 'POST',
             Headers = {
@@ -4789,17 +4774,6 @@ function library:CreateSettingsTab(menu)
     
     mainSection:AddButton({text = 'Copy Discord', flag = 'copydiscord', callback = function()
         setclipboard('discord.gg/seU6gab')
-    end})
-
-    mainSection:AddButton({text = 'Copy Game Invite', callback = function()
-        setclipboard(([[Roblox.GameLauncher.joinGameInstance(%s, "%s"))]]):format(game.PlaceId, game.JobId))
-    end})
-    local Settings = {
-        Enabled
-    }
-    mainSection:AddButton({text = 'Unload', confirm = true, callback = function()
-        Settings.Enabled = false
-        library:Unload();
     end})
 
     mainSection:AddSeparator({text = 'Keybinds'});
