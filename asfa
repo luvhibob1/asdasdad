@@ -2970,7 +2970,7 @@ function library:Load(options)
             Transparency = 0,
             Parent = tab,
             Size = UDim2.new(0.5, -4, 1, 0),
-            Position = UDim2.new(0.5, 8, 0, 0)
+            Position = UDim2.new(0.5, 20, 0, 0)
         })
 
         column2:AddListLayout(12)
