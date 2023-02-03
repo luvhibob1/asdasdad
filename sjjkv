@@ -2074,7 +2074,7 @@ do
         }, section.visibleContent)
         --
         library.colors[textbox_frame] = {
-            Color = "darkconstrast"
+            Color = "darkcontrast"
         }
         --
         local placeholder_text = utility:Create("TextLabel", {Vector2.new(middle and textbox_frame.Size.X / 2 or 4, 0), textbox_frame}, {
