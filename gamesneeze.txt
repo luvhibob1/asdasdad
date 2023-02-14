@@ -7236,7 +7236,7 @@ do
                 utility:Remove(button, true)
             end
             --
-            for i, name in ipairs(list) do
+            for i, name in ipairs(lista) do
             local config_title = utility:Create("TextLabel", {Vector2.new(list_frame.Size.X/2,2 + (20 * (i-1))), list_frame}, {
                 Text = list.options[i] or "",
                 Size = theme.textsize,
