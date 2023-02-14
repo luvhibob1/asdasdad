@@ -7180,62 +7180,6 @@ do
         }, section.visibleContent)
         --
 
-        function list:UpdateList(lista, dontset)
-            local lista = lista or {}
-
-            for i, button in next, self.buttons do
-                self.buttons[i] = nil
-                for i2, content in next, section.visibleContent do
-                    if content == button then
-                        table.remove(section.visibleContent, i2)
-                        break
-                    end
-                end
-                --
-                utility:Remove(button, false)
-                utility:Remove(button, true)
-            end
-            --
-            for i, name in ipairs(lista) do
-            local config_title = utility:Create("TextLabel", {Vector2.new(list_frame.Size.X/2,2 + (20 * (i-1))), list_frame}, {
-                Text = list.options[i] or "",
-                Size = theme.textsize,
-                Font = theme.font,
-                Color = i == 1 and theme.accent or theme.textcolor,
-                OutlineColor = theme.textborder,
-                Center = true,
-                Position = utility:Position(0.5, 0, 0, 2 + (20 * (i-1)), list_frame),
-                Visible = page.open
-            }, section.visibleContent)
-            --
-            library.colors[config_title] = {
-                OutlineColor = "textborder",
-                Color = i == 1 and "accent" or "textcolor"
-            }
-            --
-            list.buttons[i] = config_title
-            end
-            --
-
-            self:UpdateScroll()
-
-            if not dontset then
-                if multichoice then
-                    local toset = {}
-                    for idx, val in ipairs(lista) do
-                        if self:Get()[idx] then
-                            toset[#toset + 1] = self:Get()[idx]
-                        end
-                    end
-                    self:Set(toset)
-                else
-                    if lista[1] then
-                        self:Set({{lista[1], table.find(lista, lista[1])}})
-                    end
-                end
-            end
-        end
-
         --
         utility:LoadImage(list_gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
         --
@@ -7274,6 +7218,62 @@ do
         function list:Set(current)
             list.current = current
             list:Refresh()
+        end
+
+        function list:UpdateList(lista, dontset)
+            local lista = lista or {}
+
+            for i, button in next, self.buttons do
+                self.buttons[i] = nil
+                for i2, content in next, section.visibleContent do
+                    if content == button then
+                        table.remove(section.visibleContent, i2)
+                        break
+                    end
+                end
+                --
+                utility:Remove(button, false)
+                utility:Remove(button, true)
+            end
+            --
+            for i=1, list.max do
+            local config_title = utility:Create("TextLabel", {Vector2.new(list_frame.Size.X/2,2 + (20 * (i-1))), list_frame}, {
+                Text = list.options[i] or "",
+                Size = theme.textsize,
+                Font = theme.font,
+                Color = i == 1 and theme.accent or theme.textcolor,
+                OutlineColor = theme.textborder,
+                Center = true,
+                Position = utility:Position(0.5, 0, 0, 2 + (20 * (i-1)), list_frame),
+                Visible = page.open
+            }, section.visibleContent)
+            --
+            library.colors[config_title] = {
+                OutlineColor = "textborder",
+                Color = i == 1 and "accent" or "textcolor"
+            }
+            --
+            list.buttons[i] = config_title
+            end
+            --
+
+            self:UpdateScroll()
+
+            if not dontset then
+                if multichoice then
+                    local toset = {}
+                    for idx, val in ipairs(lista) do
+                        if self:Get()[idx] then
+                            toset[#toset + 1] = self:Get()[idx]
+                        end
+                    end
+                    self:Set(toset)
+                else
+                    if lista[1] then
+                        self:Set({{lista[1], table.find(lista, lista[1])}})
+                    end
+                end
+            end
         end
         --
         library.began[#library.began + 1] = function(Input)
