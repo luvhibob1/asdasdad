@@ -7180,7 +7180,7 @@ do
         }, section.visibleContent)
         --
 
-        function listbox:UpdateList(lista, dontset)
+        function list:UpdateList(lista, dontset)
             local lista = lista or {}
 
             for i, button in next, self.buttons do
